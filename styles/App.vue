@@ -1,18 +1,3 @@
-<template>
-  <router-view/>
-</template>
-
-<script>
- export default{
-  data(){
-    return{
-      msg : "",
-      cnt : 0
-    }
-  }
- }
-</script>
-
 <style lang="scss">
 	body {
 		background-color: #222b31;
@@ -37,4 +22,3 @@
 		box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
 	}
 </style>
-
