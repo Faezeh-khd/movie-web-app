@@ -1,8 +1,8 @@
 <template>
   <div id="navbar-wrap" class="card-shadow">
     <div id="navbar">
-      <h2>Movie.io</h2>
-      <div>
+      <h2 @click='$router.push("/")'>Movie.io</h2>
+      <div v-if="$route.path == '/'">
         <input v-model="search" type="text" placeholder="Find Movie..." />
     </div>
     </div>
