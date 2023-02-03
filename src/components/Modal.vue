@@ -6,6 +6,7 @@
           <div class="modal-hear"><slot name="header"></slot></div>
           <div class="modal-body"><slot name="body"></slot></div>
           <div class="modal-footer">
+            <button @click="$emit('close')">close</button>
             <slot name="footer"></slot>
             <div></div>
           </div>
