@@ -3,6 +3,7 @@ const SET_SEARCH = "SET_SEARCH";
 const SET_FILTER = "SET_FILTER";
 const ADD_MOVIE = "ADD_MOVIE";
 const DELETE_MOVIE = "DELETE_MOVIE";
+const UPDATE_MOVIE = "UPDATE_MOVIE";
 
 const state = {
   movies: movieList,
@@ -28,6 +29,14 @@ const mutations = {
       1
     );
   },
+  [UPDATE_MOVIE](state, movie) {
+    state.movies = state.movies.map((oldMovie) => {
+      if (movie.id === oldMovie.id) {
+        return movie;
+      }
+      return oldMovie;
+    });
+  },
 };
 const actions = {
   search({ commit }, search) {
@@ -42,6 +51,9 @@ const actions = {
   },
   deleteMovie({ commit }, id) {
     commit(DELETE_MOVIE, id);
+  },
+  updateMovie({ commit }, movie) {
+    commit(UPDATE_MOVIE, movie);
   },
 };
 const getters = {
