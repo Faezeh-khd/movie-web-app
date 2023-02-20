@@ -67,6 +67,7 @@ export default {
 				border-radius: 10px;
 				font-size: 20px;
 				width: 53px;
+				height: 25px;
 				color: white;
 			}
 		}

@@ -1,10 +1,10 @@
 <template>
   <div id="navbar-wrap" class="card-shadow">
     <div id="navbar">
-      <h2 @click='$router.push("/")'>Movie.io</h2>
+      <h2 @click="$router.push('/')">Movie.io</h2>
       <div v-if="$route.path == '/'">
         <input v-model="search" type="text" placeholder="Find Movie..." />
-    </div>
+      </div>
     </div>
   </div>
 </template>
@@ -18,9 +18,9 @@ export default {
   },
   watch: {
     search() {
-        this.$store.dispatch("search", this.search);
-    }
-  }
+      this.$store.dispatch("search", this.search);
+    },
+  },
 };
 </script>
 
@@ -34,12 +34,17 @@ export default {
     display: flex;
     padding: 15px;
     justify-content: space-between;
-    background-color: #a34c01;
+    background-color: rgb(226, 29, 29);
 
     h2 {
       margin: 0 1rem 0 0;
       color: white;
       cursor: pointer;
+      transition: 0.3s;
+    }
+
+    h2:hover {
+      color: rgb(28, 23, 23);
     }
 
     & > div {

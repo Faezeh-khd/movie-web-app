@@ -213,6 +213,10 @@ export default {
         justify-content: space-between;
         margin-top: 1rem;
 
+        button:hover {
+          color: white;
+        }
+
         .edit {
           height: 30px;
           width: 80px;
@@ -223,6 +227,7 @@ export default {
           border-radius: 10px;
           outline: none;
           cursor: pointer;
+          transition: 0.3s;
         }
 
         .delete {
@@ -235,6 +240,7 @@ export default {
           border-radius: 10px;
           outline: none;
           cursor: pointer;
+          transition: 0.3s;
         }
       }
     }

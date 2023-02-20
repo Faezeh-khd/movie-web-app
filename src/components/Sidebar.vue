@@ -144,6 +144,11 @@ export default {
     border-radius: 10px;
     outline: none;
     cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover {
+    color: white;
+    background-color: #15a935;
   }
 
   #movie-form {
